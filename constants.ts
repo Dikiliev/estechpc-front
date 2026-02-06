@@ -62,7 +62,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'ПК ARDOR GAMING RAGE H386',
     category: 'gaming_pc',
     price: 99900,
-    image: '/ПК ARDOR GAMING RAGE H386.webp',
+    image: '/products/ПК ARDOR GAMING RAGE H386.webp',
     description: 'Мощная игровая система для комфортного гейминга в Full HD и 2K разрешениях. Оптимальный баланс производительности и стоимости.',
     rating: 4.7,
     featured: true,
@@ -78,7 +78,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'ПК ARDOR GAMING RAGE H431',
     category: 'gaming_pc',
     price: 184000,
-    image: '/ПК ARDOR GAMING RAGE H431.webp',
+    image: '/products/ПК ARDOR GAMING RAGE H431.webp',
     description: 'Высокопроизводительная игровая система для 2K и 4K гейминга. Идеальна для стриминга и профессионального контента.',
     rating: 4.9,
     featured: true,
@@ -96,7 +96,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Процессор Intel Core i5-12400F OEM',
     category: 'cpu',
     price: 10900,
-    image: '/Процессор Intel Core i5-12400F OEM.webp',
+    image: '/products/Процессор Intel Core i5-12400F OEM.webp',
     description: '6-ядерный процессор 12-го поколения Intel Core. Отличное соотношение цена/производительность для игр и работы.',
     rating: 4.6,
     specs: { 
@@ -113,7 +113,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Процессор AMD Ryzen 5 7500F OEM',
     category: 'cpu',
     price: 11400,
-    image: '/Процессор AMD Ryzen 5 7500F OEM.webp',
+    image: '/products/Процессор AMD Ryzen 5 7500F OEM.webp',
     description: '6-ядерный процессор на архитектуре Zen 4. Высокая производительность в играх и многозадачности без встроенной графики.',
     rating: 4.8,
     specs: { 
@@ -130,7 +130,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Процессор AMD Ryzen 7 9800X3D OEM',
     category: 'cpu',
     price: 45000,
-    image: '/Процессор AMD Ryzen 7 9800X3D OEM.webp',
+    image: '/products/Процессор AMD Ryzen 7 9800X3D OEM.webp',
     description: 'Флагманский процессор с технологией 3D V-Cache. Лучший выбор для игр и профессиональных задач.',
     rating: 5.0,
     featured: true,
@@ -150,7 +150,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Материнская плата MSI B650 GAMING PLUS WIFI',
     category: 'mb',
     price: 14900,
-    image: '/Материнская плата MSI B650 GAMING PLUS WIFI.webp',
+    image: '/products/Материнская плата MSI B650 GAMING PLUS WIFI.webp',
     description: 'Надежная плата для процессоров AMD AM5 с поддержкой DDR5 и встроенным Wi-Fi 6E.',
     rating: 4.7,
     specs: { 
@@ -167,7 +167,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Материнская плата ASUS ROG STRIX B660-A GAMING WIFI D4',
     category: 'mb',
     price: 15900,
-    image: '/Материнская плата ASUS ROG STRIX B660-A GAMING WIFI D4.webp',
+    image: '/products/Материнская плата ASUS ROG STRIX B660-A GAMING WIFI D4.webp',
     description: 'Премиальная плата для Intel 12-го поколения с поддержкой DDR4 и расширенными возможностями разгона.',
     rating: 4.8,
     specs: { 
@@ -186,7 +186,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Оперативная память ADATA XPG GAMMIX D35 16 ГБ',
     category: 'ram',
     price: 9900,
-    image: '/Оперативная память ADATA XPG GAMMIX D35 [AX4U32008G16A-DTBKD35] 16 ГБ.webp',
+    image: '/products/Оперативная память ADATA XPG GAMMIX D35 [AX4U32008G16A-DTBKD35] 16 ГБ.webp',
     description: 'Высокоскоростная память DDR5 для игровых систем. Отличное соотношение цена/производительность.',
     rating: 4.6,
     specs: { 
@@ -203,7 +203,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Оперативная память Kingston FURY Beast Black 32 ГБ',
     category: 'ram',
     price: 22900,
-    image: '/Оперативная память Kingston FURY Beast Black [KF556C36BBEK2-32] 32 ГБ.webp',
+    image: '/products/Оперативная память Kingston FURY Beast Black [KF556C36BBEK2-32] 32 ГБ.webp',
     description: 'Премиальная память DDR5 для энтузиастов. Высокая частота и низкие тайминги для максимальной производительности.',
     rating: 4.9,
     specs: { 
@@ -222,7 +222,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Palit GeForce RTX 5060 Ti Dual',
     category: 'gpu',
     price: 41900,
-    image: '/Palit GeForce RTX 5060 Ti Dual [NE7506T019P1-GB2062D].webp',
+    image: '/products/Palit GeForce RTX 5060 Ti Dual [NE7506T019P1-GB2062D].webp',
     description: 'Современная видеокарта для комфортного гейминга в Full HD и 2K. Поддержка DLSS 3.5 и трассировки лучей.',
     rating: 4.7,
     specs: { 
@@ -238,7 +238,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'GIGABYTE GeForce RTX 3080 GAMING OC (LHR)',
     category: 'gpu',
     price: 39900,
-    image: '/GIGABYTE GeForce RTX 3080 GAMING OC (LHR) [GV-N3080GAMING OC-10GD rev2.0].webp',
+    image: '/products/GIGABYTE GeForce RTX 3080 GAMING OC (LHR) [GV-N3080GAMING OC-10GD rev2.0].webp',
     description: 'Мощная видеокарта для 2K и 4K гейминга. Отличная производительность в играх и творческих задачах.',
     rating: 4.8,
     specs: { 
@@ -254,7 +254,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'GIGABYTE GeForce RTX 3080 Ti VISION OC',
     category: 'gpu',
     price: 49900,
-    image: '/GIGABYTE GeForce RTX 3080 Ti VISION OC [GV-N308TVISION OC-12GD].webp',
+    image: '/products/GIGABYTE GeForce RTX 3080 Ti VISION OC [GV-N308TVISION OC-12GD].webp',
     description: 'Флагманская видеокарта для профессиональной работы и 4K гейминга. Белый дизайн для эстетичных сборок.',
     rating: 4.9,
     featured: true,
@@ -273,7 +273,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: '1000ГБ M.2 NVMe накопитель Kingston NV3',
     category: 'storage',
     price: 5900,
-    image: '/1000ГБ M.2 NVMe накопитель Kingston NV3.webp',
+    image: '/products/1000ГБ M.2 NVMe накопитель Kingston NV3.webp',
     description: 'Быстрый NVMe SSD для операционной системы и игр. Отличная скорость чтения/записи.',
     rating: 4.6,
     specs: { 
@@ -290,7 +290,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: '1000 ГБ 2.5 SATA накопитель Samsung 870 EVO',
     category: 'storage',
     price: 9900,
-    image: '/1000 ГБ 2.5 SATA накопитель Samsung 870 EVO [MZ-77E1T0BW].webp',
+    image: '/products/1000 ГБ 2.5 SATA накопитель Samsung 870 EVO [MZ-77E1T0BW].webp',
     description: 'Надежный SATA SSD для хранения данных. Проверенное качество Samsung с длительной гарантией.',
     rating: 4.8,
     specs: { 
@@ -309,7 +309,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Кулер для процессора DEEPCOOL AG620',
     category: 'cpu_cooler',
     price: 2900,
-    image: '/Кулер для процессора DEEPCOOL AG620 [R-AG620-BKNNMN-G-1] черный.webp',
+    image: '/products/Кулер для процессора DEEPCOOL AG620 [R-AG620-BKNNMN-G-1] черный.webp',
     description: 'Мощный башенный кулер с двумя вентиляторами. Отличное охлаждение для процессоров среднего и высокого класса.',
     rating: 4.7,
     specs: { 
@@ -328,7 +328,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Блок питания DEEPCOOL PF750',
     category: 'psu',
     price: 5900,
-    image: '/Блок питания DEEPCOOL PF750 [R-PF750D-HA0B-EU] черный.webp',
+    image: '/products/Блок питания DEEPCOOL PF750 [R-PF750D-HA0B-EU] черный.webp',
     description: 'Надежный блок питания 80+ Bronze для средних и мощных систем. Полная модульная кабельная система.',
     rating: 4.6,
     specs: { 
@@ -345,7 +345,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Блок питания Cougar GEC 850',
     category: 'psu',
     price: 9900,
-    image: '/Блок питания Cougar GEC 850 [CGR GC-850] черный.webp',
+    image: '/products/Блок питания Cougar GEC 850 [CGR GC-850] черный.webp',
     description: 'Высококачественный блок питания 80+ Gold для мощных игровых систем. Тихая работа и стабильность.',
     rating: 4.8,
     specs: { 
@@ -364,7 +364,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Корпус Cougar FV150 RGB черный',
     category: 'case',
     price: 5900,
-    image: '/Корпус Cougar FV150 RGB [FV150 RGB black] черный.webp',
+    image: '/products/Корпус Cougar FV150 RGB [FV150 RGB black] черный.webp',
     description: 'Компактный корпус Mid-Tower с RGB подсветкой. Отличная вентиляция и современный дизайн.',
     rating: 4.5,
     specs: { 
@@ -381,7 +381,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Корпус Cougar FV150 RGB White белый',
     category: 'case',
     price: 6200,
-    image: '/Корпус Cougar FV150 RGB White белый.webp',
+    image: '/products/Корпус Cougar FV150 RGB White белый.webp',
     description: 'Элегантный белый корпус с RGB подсветкой. Идеален для светлых сборок и эстетичных конфигураций.',
     rating: 4.6,
     specs: { 
@@ -398,7 +398,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Корпус Cougar MX600 RGB',
     category: 'case',
     price: 8900,
-    image: '/Корпус Cougar MX600 RGB [3857C90.0017] черный.webp',
+    image: '/products/Корпус Cougar MX600 RGB [3857C90.0017] черный.webp',
     description: 'Просторный корпус Full-Tower с улучшенной вентиляцией. Поддержка больших видеокарт и систем охлаждения.',
     rating: 4.7,
     specs: { 
@@ -415,7 +415,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Корпус Ocypus Iota C70 ARGB',
     category: 'case',
     price: 11900,
-    image: '/Корпус Ocypus Iota C70 ARGB [Iota-C70-BKD600XX-GL] черный.webp',
+    image: '/products/Корпус Ocypus Iota C70 ARGB [Iota-C70-BKD600XX-GL] черный.webp',
     description: 'Премиальный корпус с панорамным стеклом и ARGB подсветкой. Максимальная видимость компонентов.',
     rating: 4.9,
     featured: true,

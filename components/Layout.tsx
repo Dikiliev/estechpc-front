@@ -16,11 +16,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-gray-200 font-sans">
-      <Header 
-        cartCount={cartCount}
-        onCartClick={() => setIsCartOpen(true)}
-        wishlistCount={wishlist.length}
-      />
+        <Header 
+          cartCount={cartCount}
+          onCartClick={() => setIsCartOpen(true)}
+          wishlistCount={wishlist.length}
+        />
       
       <main className="flex-grow">
         {children || <Outlet />}

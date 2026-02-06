@@ -25,10 +25,11 @@ export const ConfiguratorPage: React.FC = () => {
   const activeStep = BUILD_STEPS.find(s => s.id === activeCategoryId) || BUILD_STEPS[0];
   const totalPrice = useMemo(() => {
     return Object.values(selections).reduce((sum: number, item) => {
+      if (!item) return sum;
       if (Array.isArray(item)) {
-        return sum + item.reduce((arrSum, p) => arrSum + p.price, 0);
+        return sum + item.reduce((arrSum, p) => arrSum + (p?.price || 0), 0);
       }
-      return sum + (item as Product).price;
+      return sum + ((item as Product)?.price || 0);
     }, 0);
   }, [selections]);
 
@@ -94,9 +95,12 @@ export const ConfiguratorPage: React.FC = () => {
     const flatSelections: Record<string, Product> = {};
     Object.keys(selections).forEach(key => {
       const item = selections[key];
+      if (!item) return;
       if (Array.isArray(item)) {
         item.forEach((p, idx) => {
-          flatSelections[`${key}_${idx}`] = p;
+          if (p) {
+            flatSelections[`${key}_${idx}`] = p;
+          }
         });
       } else {
         flatSelections[key] = item;
@@ -150,9 +154,12 @@ export const ConfiguratorPage: React.FC = () => {
     Object.keys(selections).forEach(key => {
       if (key === activeStep.id) return;
       const item = selections[key];
+      if (!item) return;
       if (Array.isArray(item)) {
         item.forEach((p, idx) => {
-          flatSelections[`${key}_${idx}`] = p;
+          if (p) {
+            flatSelections[`${key}_${idx}`] = p;
+          }
         });
       } else {
         flatSelections[key] = item;
@@ -188,9 +195,12 @@ export const ConfiguratorPage: React.FC = () => {
     const flatSelections: Record<string, Product> = {};
     Object.keys(nextSelections).forEach(key => {
       const item = nextSelections[key];
+      if (!item) return;
       if (Array.isArray(item)) {
         item.forEach((p, idx) => {
-          flatSelections[`${key}_${idx}`] = p;
+          if (p) {
+            flatSelections[`${key}_${idx}`] = p;
+          }
         });
       } else {
         flatSelections[key] = item;
@@ -200,11 +210,13 @@ export const ConfiguratorPage: React.FC = () => {
     Object.keys(nextSelections).forEach(key => {
       if (key === activeStep.id) return;
       const existingPart = nextSelections[key];
+      if (!existingPart) return;
       if (Array.isArray(existingPart)) {
         existingPart.forEach(p => {
+          if (!p) return;
           const check = checkCompatibility(p, flatSelections);
           if (!check.compatible) {
-            const newArray = existingPart.filter(ep => ep.id !== p.id);
+            const newArray = existingPart.filter(ep => ep && ep.id !== p.id);
             nextSelections[key] = newArray.length > 0 ? newArray : undefined;
           }
         });
@@ -227,7 +239,9 @@ export const ConfiguratorPage: React.FC = () => {
     const gpu = selections['gpu'] as Product | undefined;
     const caseItem = selections['case'] as Product | undefined;
     const storage = selections['storage'];
-    const storageArray = Array.isArray(storage) ? storage : (storage ? [storage] : []);
+    const storageArray = Array.isArray(storage) 
+      ? storage.filter(s => s) 
+      : (storage ? [storage] : []);
     
     const customBuild: Product = {
       id: `custom-${Date.now()}`,
@@ -241,7 +255,7 @@ export const ConfiguratorPage: React.FC = () => {
         Видеокарта: gpu?.name || 'В ожидании',
         Память: (selections['ram'] as Product)?.name || 'В ожидании',
         Плата: (selections['mb'] as Product)?.name || 'В ожидании',
-        Накопители: storageArray.length > 0 ? storageArray.map(s => s.name).join(', ') : 'В ожидании',
+        Накопители: storageArray.length > 0 ? storageArray.filter(s => s).map(s => s.name).join(', ') : 'В ожидании',
         Охлаждение: (selections['cooling'] as Product)?.name || 'В ожидании',
         'Блок питания': (selections['psu'] as Product)?.name || 'В ожидании',
       },
@@ -286,7 +300,7 @@ export const ConfiguratorPage: React.FC = () => {
                       e.stopPropagation();
                       if (isStorage) {
                         setSelections(prev => ({ ...prev, storage: undefined }));
-                      } else {
+                      } else if (selectedArray[0]) {
                         handleSelect(selectedArray[0]);
                       }
                     }}
@@ -302,10 +316,12 @@ export const ConfiguratorPage: React.FC = () => {
             {hasSelection ? (
                 <div className="space-y-2">
                   {selectedArray.map((item, idx) => (
-                    <div key={item.id || idx}>
-                      <p className="text-sm text-white font-medium truncate">{item.name}</p>
-                      <p className="text-xs text-estech-accent font-mono mt-1">{item.price.toLocaleString('ru-RU')} ₽</p>
-                    </div>
+                    item ? (
+                      <div key={item.id || idx}>
+                        <p className="text-sm text-white font-medium truncate">{item.name}</p>
+                        <p className="text-xs text-estech-accent font-mono mt-1">{item.price.toLocaleString('ru-RU')} ₽</p>
+                      </div>
+                    ) : null
                   ))}
                 </div>
             ) : (
