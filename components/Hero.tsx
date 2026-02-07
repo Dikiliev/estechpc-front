@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white tracking-tighter leading-[0.85] mb-6 text-balance shadow-black drop-shadow-lg">
+          <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-white tracking-tighter leading-[0.85] mb-6 text-balance shadow-black drop-shadow-lg">
             ИНЖЕНЕРНОЕ <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">СОВЕРШЕНСТВО.</span>
           </h1>
